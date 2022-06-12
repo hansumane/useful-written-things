@@ -5,7 +5,7 @@
 double sq(double n) {
 
     if (n < 0.0l) {
-        return NAN;
+        return -NAN;
     }
 
     else if (n == 0.0l) {

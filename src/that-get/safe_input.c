@@ -3,9 +3,47 @@
 #include "safe_input.h"
 
 
-char * get_string(void) {
+size_t len(char* in) {
+    size_t i = 0;
+    if (in != NULL) {
+        while (in[i] > 0) {
+            ++i;
+        }
+    }
+    return i;
+}
 
-    unsigned size = 0;
+
+void cpy(char* out, char* in) {
+    size_t i = 0;
+    if (out != NULL && in != NULL) {
+        for (i = 0; i < len(in); ++i) {
+            out[i] = in[i];
+        }
+        out[i] = 0;
+    }
+}
+
+
+char * get_string_buf(void) {
+
+    char buffer[BUFSIZ] = {};
+    fgets(buffer, BUFSIZ, stdin);
+    if (buffer[len(buffer) - 1] == '\n') {
+        buffer[len(buffer) - 1] = '\0';
+    }
+
+    char *result = (char*) malloc((len(buffer) + 1) * sizeof(char));
+    cpy(result, buffer);
+
+    return result;
+
+}
+
+
+char * get_string_inf(void) {
+
+    size_t size = 0;
     char temp_char;
     char *result = (char*) malloc(size * sizeof(char));
 

@@ -9,7 +9,8 @@ int main(void) {
     char achar;
     float afloat;
     double adouble;
-    char* astring;
+    char *astring;
+    char *bstring;
 
     printf("Input integer: ");
     aint = get_int();
@@ -32,11 +33,16 @@ int main(void) {
     adouble = get_double();
     printf("Your double: %lf\n", adouble);
 
-    printf("Input string: ");
-    astring = get_string();
+    printf("Input string (%u): ", BUFSIZ);
+    astring = get_string_buf();
     printf("Your string: %s\n", astring);
 
+    printf("Input string (inf): ");
+    bstring = get_string_inf();
+    printf("Your string: %s\n", bstring);
+
     free(astring);
+    free(bstring);
 
     return 0;
 

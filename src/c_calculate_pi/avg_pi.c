@@ -6,7 +6,7 @@
  * So as precision gets bigger, and step gets smaller,
  * average of sqrt(1 - x^2) gets closer to pi / 4.
  * This program uses 2^34 + 1 steps from 0 to 1,
- * and calculates 10 significant digits of pi within 1 minute.
+ * and calculates 10 significant digits of pi within 40-50 seconds.
  * However, this is a very unefficient and slow method
  * to calculate pi, I designed it when I had no idea what
  * Taylor expansion is at all, nevertheless, it works, so... */

@@ -4,7 +4,7 @@
  * which is 1 - 1/3 + 1/5 - 1/7 + ... or sum((-1)^n/(2*n + 1), 0, N).
  * So as N gets bigger, this sum gets closer to pi / 4.
  * This program uses 2^34 as N and calculates 10 significant digits of pi
- * within approximately 40 seconds total */
+ * within approximately 40-50 seconds total */
 
 int main (void) {
 

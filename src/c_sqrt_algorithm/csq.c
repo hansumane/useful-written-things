@@ -26,7 +26,7 @@ int main(void) {
 
     double number, result, real;
 
-    printf("Input number: ");
+    printf("Input float number: ");
     scanf("%lf", &number); getchar();
 
     result = sq(number);
